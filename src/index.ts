@@ -3,6 +3,10 @@ require("dotenv").config();
 import express from "express";
 import userRouter from "./routes/users";
 import authRouter from "./routes/auth";
+import rolesRouter from "./routes/roles";
+import schoolsRouter from "./routes/schools";
+
+
 
 
 const cors = require("cors");
@@ -17,7 +21,10 @@ app.listen(PORT, () => {
 
 
 app.use("/api/v1/auth",authRouter);
-app.use("/api/v1", userRouter); 
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/schools", schoolsRouter);
+app.use("/api/v1/roles", rolesRouter); 
+
 
 
 

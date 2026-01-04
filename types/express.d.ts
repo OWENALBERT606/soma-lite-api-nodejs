@@ -7,3 +7,5 @@ export interface AuthenticatedRequest extends Request {
     schoolId?: string | null;
   };
 }
+
+
